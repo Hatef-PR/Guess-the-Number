@@ -11,7 +11,7 @@ public class Main {
             System.out.println("Guess a number between 0 to 9");
             String guess = input.nextLine();
             try {
-                if (CheckIsDigit(guess)) {
+                if (checkIsDigit(guess)) {
                     newGuess = Integer.parseInt(guess);
                 } else {
                     System.out.println("Entered number is invalid!");
@@ -28,8 +28,8 @@ public class Main {
             }
         }
     }
-    // this method checks the entered value is digit or not
-    static boolean CheckIsDigit (String input) {
+    // This method checks the entered value is digit or not
+    static boolean checkIsDigit (String input) {
         boolean isAllDigits = true;
         for (int i = 0; i < input.length(); i++) {
                 if (!Character.isDigit(input.charAt(i))) {
